@@ -1,2 +1,2 @@
 Learning scripts 
-Added a new file
+Added a new file with ls command
