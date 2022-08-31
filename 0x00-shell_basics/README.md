@@ -1,3 +1,3 @@
 Learning scripts 
 Added a new file with ls command
-added nes script
+new command to change directory to root
