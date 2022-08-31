@@ -1,2 +1,2 @@
-Learnign scripts \n
+Learning scripts 
 Added a new file
