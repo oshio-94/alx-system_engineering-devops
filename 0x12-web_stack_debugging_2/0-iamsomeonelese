@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Script that runs whoami command under an used passed
+sudo adduser "$1"
 sudo -u "$1" 'whoami'
