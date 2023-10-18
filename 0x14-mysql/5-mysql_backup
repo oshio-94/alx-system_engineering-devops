@@ -2,4 +2,4 @@
 # Script that compress a SQL dump
 mysqldump --all-databases -u root -p "$1" > backup.sql
 tar -cvf "$(date '+%d-%m-%Y').tar" backup.sql
-gzip backup.*
+gzip backup.tar
