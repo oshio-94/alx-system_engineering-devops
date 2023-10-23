@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Script to make a request from an API using test JSONPlaceholder"""
 
+import cvs
 import json
 import requests
 import sys
@@ -20,4 +21,8 @@ if __name__ == "__main__":
     for x in resj:
         task.extend([sys.argv[1], username, x.get('completed'), x.get('title')])
 
-    print(task)
+    filename = '{}.csv'.format(sys.argv[1])
+    with open(filenae, 'w') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        for x in task:
+            csvwriter.writerows(x)
