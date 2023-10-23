@@ -23,6 +23,5 @@ if __name__ == "__main__":
 
     filename = '{}.csv'.format(sys.argv[1])
     with open(filename, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        """for x in task:"""
+        csvwriter = csv.writer(csvfile, delimiter=',', quotechar="'", quoting=csv.QUOTE_ALL)
         csvwriter.writerow(task)
