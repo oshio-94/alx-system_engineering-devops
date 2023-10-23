@@ -24,7 +24,7 @@ if __name__ == "__main__":
     filename = '{}.csv'.format(sys.argv[1])
     with open(filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile,
-                               delimiter=',', quotechar="",
+                               delimiter=',',
                                quoting=csv.QUOTE_ALL)
         for x in task:
             csvwriter.writerow(x)
