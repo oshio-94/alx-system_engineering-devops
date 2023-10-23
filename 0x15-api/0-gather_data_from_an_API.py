@@ -11,7 +11,7 @@ if __name__ == "__main__":
   user = '{}users/{}'.format(url, sys.argv[1])
   response = requests.get(user)
   res_json = response.json()
-  print('Employee {} is done with tasks'.format(res_json.get('name'),end=' '))
+  print('Employee {} is done with tasks'.format(res_json.get('name'),end=""))
 
   to_dolist = '{}todos?userId={}'.format(url, sys.argv[1])
   res = requests.get(to_dolist)
@@ -21,6 +21,6 @@ if __name__ == "__main__":
      if x.get('completed') is True:
        task.append(x)
 
-  print('{}/{}'.format(len(task), len(resj)))
+  print('({}/{}):'.format(len(task), len(resj)))
   for y in task:
      print("\t {}".format(y.get("title")))
