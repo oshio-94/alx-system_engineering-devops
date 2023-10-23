@@ -4,14 +4,14 @@
 import json
 import requests
 import sys
-''' Importing the necessary libraries needed for this project'''
+
 
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
     user = '{}users/{}'.format(url, sys.argv[1])
     response = requests.get(user)
     res_json = response.json()
-    print('Employee {} is done with tasks'.format(res_json.get('name'),end=""))
+    print('Employee {} is done with tasks'.format(res_json.get('name')), end="")
 
     to_dolist = '{}todos?userId={}'.format(url, sys.argv[1])
     res = requests.get(to_dolist)
