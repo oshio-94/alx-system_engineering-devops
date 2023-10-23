@@ -28,4 +28,3 @@ if __name__ == "__main__":
                                quoting=csv.QUOTE_ALL)
         for x in task:
             csvwriter.writerow(x)
-
