@@ -25,4 +25,4 @@ if __name__ == "__main__":
     with open(filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         """for x in task:"""
-        csvwriter.writerow(x)
+        csvwriter.writerow(task)
