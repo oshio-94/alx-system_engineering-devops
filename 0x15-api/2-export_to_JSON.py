@@ -19,11 +19,11 @@ if __name__ == "__main__":
     resj = res.json()
     task = []
     for x in resj:
-        json_task = {"task": task.get('title'),
-                     "completed": task.get('completed'),
+        json_task = {"task": x.get('title'),
+                     "completed": x.get('completed'),
                      "username": usrname}
 
-    filename = '{}.json'.format(userid)
-    tasks_dict = {str(userid): task}
+    filename = '{}.json'.format(sys.argv[1])
+    tasks_dict = {str(sys.argv[1]): task}
     with open(filename, 'w') as jsonfile:
         json.dump(tasks_dict, jsonfile)
