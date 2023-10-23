@@ -8,8 +8,8 @@ import sys
 
 if __name__ == "__main__":
   url = 'https://jsonplaceholder.typicode.com/'
-  users = '{}users/{}'.format(url, sys.argv[1])
-  response = requests.get(users)
+  user = '{}users/{}'.format(url, sys.argv[1])
+  response = requests.get(user)
   res_json = response.json()
   print('Employee {} is done with tasks'.format(res_json.get('name'),end=' '))
 
@@ -23,4 +23,4 @@ if __name__ == "__main__":
 
   print('{}/{}'.format(len(task), len(resj)))
   for y in task:
-     print("\n {}".format(y.get("title")))
+     print("\t {}".format(y.get("title")))
