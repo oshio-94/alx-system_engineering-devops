@@ -22,6 +22,7 @@ if __name__ == "__main__":
         json_task = {"task": x.get('title'),
                      "completed": x.get('completed'),
                      "username": usrname}
+        task.append(json_task)
 
     filename = '{}.json'.format(sys.argv[1])
     tasks_dict = {str(sys.argv[1]): task}
