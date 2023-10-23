@@ -22,7 +22,7 @@ if __name__ == "__main__":
         task.extend([sys.argv[1], username, x.get('completed'), x.get('title')])
 
     filename = '{}.csv'.format(sys.argv[1])
-    with open(filenae, 'w') as csvfile:
+    with open(filename, 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
         for x in task:
             csvwriter.writerows(x)
