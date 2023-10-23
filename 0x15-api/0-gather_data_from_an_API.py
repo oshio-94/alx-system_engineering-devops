@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#Script to make a request from an API
+""" Script to make a request from an API """
 
 import json
 import requests
