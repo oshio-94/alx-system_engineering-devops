@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Script to make a request from an API using test JSONPlaceholder"""
 
-import cvs
+import csv
 import json
 import requests
 import sys
