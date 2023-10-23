@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" Script to make a request from an API """
+""" Script to make a request from an API using test from JSONPlaceholder"""
 
 import json
 import requests
 import sys
+''' Importing the necessary libraries needed for this project'''
 
 url = 'https://jsonplaceholder.typicode.com/'
 users = '{}users/{}'.format(url, sys.argv[1])
