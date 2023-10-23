@@ -19,10 +19,13 @@ if __name__ == "__main__":
     resj = res.json()
     task = []
     for x in resj:
-        task.extend([sys.argv[1], usrname, x.get('completed'), x.get('title')])
+        task.append([sys.argv[1], usrname, x.get('completed'), x.get('title')])
 
     filename = '{}.csv'.format(sys.argv[1])
     with open(filename, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile, 
-                delimiter=',', quotechar="'", quoting=csv.QUOTE_ALL)
-        csvwriter.writerow(task)
+        csvwriter = csv.writer(csvfile,
+                               delimiter=',', quotechar=" ",
+                               quoting=csv.QUOTE_ALL)
+        for x in task:
+            csvwriter.writerow(x)
+
