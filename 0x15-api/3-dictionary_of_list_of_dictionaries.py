@@ -11,9 +11,9 @@ if __name__ == "__main__":
     res = requests.get(user)
     response = res.json()
     dict_task = {}
-    for user in response:
-        name = user.get('username')
-        userid = user.get('id')
+    for y in response:
+        name = y.get('username')
+        userid = y.get('id')
         todos = '{}todos?userId={}'.format(url, userid)
         res = requests.get(todos)
         tasks = res.json()
