@@ -20,12 +20,11 @@ if __name__ == "__main__":
         task = []
         for x in tasks:
             dct_task = {"username": name,
-                         "task": x.get('title'),
-                         "completed": x.get('completed')}
+                        "task": x.get('title'),
+                        "completed": x.get('completed')}
             task.append(dct_task)
 
     full_task = {str(userid): task}
     filename = 'todo_all_employees.json'
     with open(filename, 'w') as fname:
         json.dump(full_task, fname)
-
