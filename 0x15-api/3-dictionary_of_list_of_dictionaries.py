@@ -10,7 +10,7 @@ if __name__ == "__main__":
     user = '{}users'.format(url)
     res = requests.get(user)
     response = res.json()
-    dict_task = {}
+    dict_task = []
     for y in response:
         name = y.get('username')
         userid = y.get('id')
