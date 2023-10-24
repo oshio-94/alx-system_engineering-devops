@@ -24,7 +24,7 @@ if __name__ == "__main__":
                         "completed": x.get('completed')}
             task.append(dct_task)
 
-        full_task = {str(userid): task}
+    full_task = {str(userid): task}
     filename = 'todo_all_employees.json'
     with open(filename, 'w') as fname:
         json.dump(full_task, fname)
