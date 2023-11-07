@@ -9,28 +9,25 @@ import sys
 
 def top_ten(subreddit):
     """ Queries to Reddit API """
-    u_agent = 'Mozilla/5.0'
-
+    version = 'Mozilla/5.0'
     headers = {
-        'User-Agent': u_agent
+        'User-Agent': version
     }
-
     params = {
         'limit': 10
     }
-
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    res = requests.get(url,
+    resp = requests.get(url,
                        headers=headers,
                        params=params,
                        allow_redirects=False)
-    if res.status_code != 200:
+    if resp.status_code != 200:
         print(None)
         return
-    dic = res.json()
-    hot_posts = dic['data']['children']
-    if len(hot_posts) is 0:
+    diction = resp.json()
+    posts = diction['data']['children']
+    if len(posts) is 0:
         print(None)
     else:
-        for post in hot_posts:
+        for post in posts:
             print(post['data']['title'])
