@@ -23,7 +23,7 @@ def top_ten(subreddit):
                        allow_redirects=False)
     if resp.status_code != 200:
         print(None)
-        return
+        return 0
     diction = resp.json()
     posts = diction['data']['children']
     if len(posts) is 0:
