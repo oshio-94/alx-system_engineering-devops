@@ -9,19 +9,17 @@ import sys
 
 def number_of_subscribers(subreddit):
     """ Queries to Reddit API """
-    u_agent = 'Mozilla/5.0'
-
+    version = 'Mozilla/5.0'
     headers = {
-        'User-Agent': u_agent
+        'User-Agent': version
     }
-
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    res = requests.get(url, headers=headers, allow_redirects=False)
-    if res.status_code != 200:
+    resp = requests.get(url, headers=headers, allow_redirects=False)
+    if resp.status_code != 200:
         return 0
-    dic = res.json()
+    dic = resp.json()
     if 'data' not in dic:
         return 0
     if 'subscribers' not in dic.get('data'):
         return 0
-    return res.json()['data']['subscribers']
+    return resp.json()['data']['subscribers']
